@@ -5,11 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Murmur - Mymy Something</title>
+  <title>How to label the elements of a bar chart with strings in MATLAB - Mymy Something</title>
   <meta name="author" content="Mymy">
 
   
-  <meta name="description" content="Category: Murmur">
+  <meta name="description" content="最近寫matlab時，發現bar()這個function竟然沒有支援輸入參數來更改各個長條圖在x軸底下的label。 而解法如下: 1
+2
+bar([1 2 3]);
+set(gca, &#39;XTicklabel&#39;, {&#39;label1&#39;, &#39;label2&#39 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://littlefatroy.github.comblog/categories/murmur/">
+  <link rel="canonical" href="http://littlefatroy.github.com/blog/2013/01/16/how-to-label-the-elements-of-a-bar-chart-with-strings-in-matlab/">
   <link href="/icecube.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -83,50 +86,136 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Murmur</h1>
+    
+      
+        <h1 class="entry-title">How to Label the Elements of a Bar Chart With Strings in MATLAB</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-16T16:47:00+08:00" pubdate data-updated="true">Jan 16<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
+
+
+<div class="entry-content"><p>最近寫matlab時，發現bar()這個function竟然沒有支援輸入參數來更改各個長條圖在x軸底下的label。</p>
+
+<br>
+
+
+<p>而解法如下:</p>
+
+<br>
+
+
+<!--more-->
 
 
 
-  
-  <h2>2012</h2>
 
-<article>
-  
-<h1><a href="/blog/2012/11/23/we-talk-no-more/">謝謝，別再聯絡</a></h1>
-<time datetime="2012-11-23T02:59:00+08:00" pubdate><span class='month'>Nov</span> <span class='day'>23</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/murmur/'>Murmur</a></span>
-</footer>
-
-
-</article>
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='matlab'><span class='line'><span class="n">bar</span><span class="p">([</span>1 2 3<span class="p">]);</span>
+</span><span class='line'><span class="n">set</span><span class="p">(</span><span class="n">gca</span><span class="p">,</span> <span class="s">&#39;XTicklabel&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;label1&#39;</span><span class="p">,</span> <span class="s">&#39;label2&#39;</span><span class="p">,</span> <span class="s">&#39;label3&#39;</span><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
-<article>
-  
-<h1><a href="/blog/2012/11/13/how-to-install-octopress/">Hello, Octopress!</a></h1>
-<time datetime="2012-11-13T00:50:00+08:00" pubdate><span class='month'>Nov</span> <span class='day'>13</span> <span class='year'>2012</span></time>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/murmur/'>Murmur</a>, <a class='category' href='/blog/categories/octopress/'>Octopress</a></span>
-</footer>
+<br>
 
 
-</article>
+<p>Output Figure:</p>
 
+<br>
+
+
+<p>before:
+<img src="https://dl.dropbox.com/u/37805589/octopress/img/matlab/bar-beforeSet.png"></p>
+
+<br>
+
+
+<p>after:
+<img src="https://dl.dropbox.com/u/37805589/octopress/img/matlab/bar-afterSet.png"></p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Mymy</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-16T16:47:00+08:00" pubdate data-updated="true">Jan 16<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/matlab/'>matlab</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/blog/2012/11/23/we-talk-no-more/" title="Previous Post: 謝謝，別再聯絡">&laquo; 謝謝，別再聯絡</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -180,7 +269,10 @@
       var disqus_shortname = 'littlefatroy';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://littlefatroy.github.com/blog/2013/01/16/how-to-label-the-elements-of-a-bar-chart-with-strings-in-matlab/';
+        var disqus_url = 'http://littlefatroy.github.com/blog/2013/01/16/how-to-label-the-elements-of-a-bar-chart-with-strings-in-matlab/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
